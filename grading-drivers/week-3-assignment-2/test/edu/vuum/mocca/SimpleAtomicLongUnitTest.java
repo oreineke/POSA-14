@@ -21,73 +21,73 @@ public class SimpleAtomicLongUnitTest {
     @Test
     public void testGet() {
         SimpleAtomicLong testLong = new SimpleAtomicLong(0);
-        assertEquals(testLong.get(), 0);
-		
+        assertEquals(testLong.get(), 0l);
+
         SimpleAtomicLong testLong2 = new SimpleAtomicLong(100);
-        assertEquals(testLong2.get(), 100);
-		
+        assertEquals(testLong2.get(), 100l);
+
         SimpleAtomicLong testLong3 = new SimpleAtomicLong(-100);
-        assertEquals(testLong3.get(), -100);
+        assertEquals(testLong3.get(), -100l);
     }
 
     @Test
     public void testDecrementAndGet() {
         SimpleAtomicLong testLong = new SimpleAtomicLong(0);
-        assertEquals(testLong.decrementAndGet(), -1);
-        assertEquals(testLong.get(), -1);
-		
+        assertEquals(testLong.decrementAndGet(), -1l);
+        assertEquals(testLong.get(), -1l);
+
         SimpleAtomicLong testLong2 = new SimpleAtomicLong(100);
-        assertEquals(testLong2.decrementAndGet(), 99);
-        assertEquals(testLong2.get(), 99);
-		
+        assertEquals(testLong2.decrementAndGet(), 99l);
+        assertEquals(testLong2.get(), 99l);
+
         SimpleAtomicLong testLong3 = new SimpleAtomicLong(-100);
-        assertEquals(testLong3.decrementAndGet(), -101);
-        assertEquals(testLong3.get(), -101);
+        assertEquals(testLong3.decrementAndGet(), -101l);
+        assertEquals(testLong3.get(), -101l);
     }
 
     @Test
     public void testIncrementAndGet() {
         SimpleAtomicLong testLong = new SimpleAtomicLong(0);
-        assertEquals(testLong.incrementAndGet(), 1);
-        assertEquals(testLong.get(), 1);
-		
+        assertEquals(testLong.incrementAndGet(), 1l);
+        assertEquals(testLong.get(), 1l);
+
         SimpleAtomicLong testLong2 = new SimpleAtomicLong(100);
-        assertEquals(testLong2.incrementAndGet(), 101);
-        assertEquals(testLong2.get(), 101);
-		
+        assertEquals(testLong2.incrementAndGet(), 101l);
+        assertEquals(testLong2.get(), 101l);
+
         SimpleAtomicLong testLong3 = new SimpleAtomicLong(-100);
-        assertEquals(testLong3.incrementAndGet(), -99);
-        assertEquals(testLong3.get(), -99);
+        assertEquals(testLong3.incrementAndGet(), -99l);
+        assertEquals(testLong3.get(), -99l);
     }
-	
+
     @Test
     public void testGetAndIncrement() {
         SimpleAtomicLong testLong = new SimpleAtomicLong(0);
-        assertEquals(testLong.getAndIncrement(), 0);
-        assertEquals(testLong.get(), 1);
-		
+        assertEquals(testLong.getAndIncrement(), 0l);
+        assertEquals(testLong.get(), 1l);
+
         SimpleAtomicLong testLong2 = new SimpleAtomicLong(100);
-        assertEquals(testLong2.getAndIncrement(), 100);
-        assertEquals(testLong2.get(), 101);
-		
+        assertEquals(testLong2.getAndIncrement(), 100l);
+        assertEquals(testLong2.get(), 101l);
+
         SimpleAtomicLong testLong3 = new SimpleAtomicLong(-100);
-        assertEquals(testLong3.getAndIncrement(), -100);
-        assertEquals(testLong3.get(), -99);
+        assertEquals(testLong3.getAndIncrement(), -100l);
+        assertEquals(testLong3.get(), -99l);
     }
 
     @Test
     public void testGetAndDecrement() {
         SimpleAtomicLong testLong = new SimpleAtomicLong(0);
-        assertEquals(testLong.getAndDecrement(), 0);
-        assertEquals(testLong.get(), -1);
-		
+        assertEquals(testLong.getAndDecrement(), 0l);
+        assertEquals(testLong.get(), -1l);
+
         SimpleAtomicLong testLong2 = new SimpleAtomicLong(100);
-        assertEquals(testLong2.getAndDecrement(), 100);
-        assertEquals(testLong2.get(), 99);
-		
+        assertEquals(testLong2.getAndDecrement(), 100l);
+        assertEquals(testLong2.get(), 99l);
+
         SimpleAtomicLong testLong3 = new SimpleAtomicLong(-100);
-        assertEquals(testLong3.getAndDecrement(), -100);
-        assertEquals(testLong3.get(), -101);
+        assertEquals(testLong3.getAndDecrement(), -100l);
+        assertEquals(testLong3.get(), -101l);
     }
-	
+
 }
