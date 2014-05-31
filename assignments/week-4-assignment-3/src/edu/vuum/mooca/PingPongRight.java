@@ -31,20 +31,27 @@ public class PingPongRight {
      */
     public static class PlayPingPongThread extends Thread {
 
-        /**
-         * Constants to distinguish between ping and pong Semaphores.
-         */
-        private final static int FIRST_SEMA = 0;
-        private final static int SECOND_SEMA = 1;
-
         private int mMaxLoopIterations = 0;
+
+        /**
+         * String to print (either "ping!" or "pong"!) for each
+         * iteration.
+         */
+        // TODO - You fill in here.
+
+        /**
+         * Two SimpleSemaphores:
+         *  "mIPlaySema" will be acquired by this thread if it wants to play
+         *  "mYouPlaySema" will be released by this thread to let the other thread play
+         */
+        // TODO - You fill in here.
 
         /**
          * Constructor initializes the data member(s).
          */
         public PlayPingPongThread(String stringToPrint,
-                                  SimpleSemaphore semaphoreOne,
-                                  SimpleSemaphore semaphoreTwo,
+                                  SimpleSemaphore iPlaySema,
+                                  SimpleSemaphore youPlaySema,
                                   int maxIterations) {
             // TODO - You fill in here.
         }
@@ -76,18 +83,6 @@ public class PingPongRight {
         void release() {
             // TODO fill in here
         }
-
-        /**
-         * String to print (either "ping!" or "pong"!) for each
-         * iteration.
-         */
-        // TODO - You fill in here.
-
-        /**
-         * An array of two SimpleSemaphores use to alternate pings and
-         * pongs.
-         */
-        // TODO - You fill in here.
     }
 
     /**
@@ -115,14 +110,10 @@ public class PingPongRight {
 
         // Create the ping and pong threads, passing in the string to
         // print and the appropriate SimpleSemaphores.
-        PlayPingPongThread ping = new PlayPingPongThread(/*
-                                                          * TODO - You fill in
-                                                          * here
-                                                          */);
-        PlayPingPongThread pong = new PlayPingPongThread(/*
-                                                          * TODO - You fill in
-                                                          * here
-                                                          */);
+        // TODO - You fill in the method call arguments
+        PlayPingPongThread ping = new PlayPingPongThread( );
+        // TODO - You fill in the method call arguments
+        PlayPingPongThread pong = new PlayPingPongThread( );
 
         // TODO - Initiate the ping and pong threads, which will call
         // the run() hook method.
